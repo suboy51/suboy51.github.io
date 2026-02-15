@@ -1,0 +1,24 @@
+/* 讓頭像區塊變成一個相對定位的容器 */
+.avatar-img {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+/* 設定原本的圖片 */
+.avatar-img img {
+  transition: opacity 0.5s ease-in-out !important;
+}
+
+/* 利用偽元素製作第二張圖片 */
+.avatar-img:hover img {
+  opacity: 0 !important; /* 滑鼠移入時，原圖透明度變 0 */
+}
+
+.avatar-img:hover {
+  background-image: url("/img/avatar_hover.jpg"); /* 替換成你的第二張圖路徑 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background 0.5s ease-in-out;
+}
